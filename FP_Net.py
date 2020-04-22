@@ -64,7 +64,6 @@ class Net(object):
         self.Opt = tf.train.AdamOptimizer(cf.learning_rate_base)
         self.train_opt1 = self.Opt.minimize(self.or_loss,global_step = self.global_steps)
         self.train_opt2 = self.Opt.minimize(self.ts_loss, global_step=self.global_steps)
-        # self.train_opt2 = tf.train.MomentumOptimizer(self.lr,0.9).minimize(self.ts_loss)
 
     def build(self,embedding1,embedding2,sentence,sentence_len,label_onehot,lr,l,is_training):  
         ts_loss,ts_output = self.Trivial_semantics(embedding2,sentence,sentence_len,label_onehot,lr,l,is_training)
