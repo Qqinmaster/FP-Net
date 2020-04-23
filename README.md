@@ -1,2 +1,2 @@
 # FP-Net
-Improving Text Classification through Feature Projection
+Feature Projection for Improved Text Classification
